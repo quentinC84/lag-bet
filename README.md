@@ -1,3 +1,3 @@
 # lag-bet
 
-This repository is aimed to compute **lagrangian betweeness** as defined in [1] (see documentation/biblio.md).
+This repository is aimed to compute **lagrangian betweenness** as defined in [1] (see documentation/biblio.md).
