@@ -12,6 +12,30 @@ load_cities <- function(){
 }
 #
 #
+# Set local parameters list
+set_parameters <- function(grid_tilt = 0.01,
+                           initial_time = "2020-06-01-12",
+                           final_time = "2020-07-01-12",
+                           output_freq = 60
+                           ){
+  p <- list(
+    grid_tilt,
+    initial_time,
+    final_time,
+    difftime(final_time, initial_time, units = "hours"),
+    output_freq
+  )
+  names(p) <- c(
+    "grid_tilt",
+    "initial_time",
+    "final_time",
+    "duration",
+    "output_freq"
+  )
+  return(p)
+}
+#
+#
 # Generate CONTROL file for HYSPLIT
 CONTROL.make<-function(run.nb,target.t,target.x,duration,
                        dir.data,backward=FALSE,dir.out="./",
