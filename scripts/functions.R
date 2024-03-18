@@ -1,3 +1,17 @@
+# load UE grid
+load_UE_grid <- function(){
+  f <- readRDS("inputs/UE_grid.rds")
+  return(f)
+}
+#
+# 
+# Import cities
+load_cities <- function(){
+  f <- readRDS("inputs/cities_RNSA.rds")
+  return(f)
+}
+#
+#
 # Generate CONTROL file for HYSPLIT
 CONTROL.make<-function(run.nb,target.t,target.x,duration,
                        dir.data,backward=FALSE,dir.out="./",
